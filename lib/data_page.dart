@@ -27,7 +27,7 @@ class _DataPageState extends State<DataPage> {
           future: _data,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator();
+              return const CircularProgressIndicator();
             } else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
             } else if (snapshot.hasData) {
@@ -49,7 +49,7 @@ class _DataPageState extends State<DataPage> {
                 },
               );
             } else {
-              return Text('No data');
+              return const Text('No data');
             }
           }),
     );

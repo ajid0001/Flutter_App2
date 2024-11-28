@@ -13,11 +13,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MainScreen(),
+      home: const MainScreen(),
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           textTheme: Theme.of(context).textTheme.copyWith(
-              bodyLarge: TextStyle(
+              bodyLarge: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
                   color: Colors.white))),
@@ -35,10 +35,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
-  List _screens = [
-    HomePage(),
-    DataPage(),
-    ContactPage(),
+  final List _screens = [
+    const HomePage(),
+    const DataPage(),
+    const ContactPage(),
   ];
 
   @override
@@ -53,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
               _currentIndex = pageIndex;
             });
           },
-          destinations: [
+          destinations: const [
             NavigationDestination(
               icon: Icon(Icons.home),
               label: 'Home',

@@ -28,14 +28,14 @@ class _ContactPageState extends State<ContactPage> {
                 'Want Something? Tell Us.',
                 style: Theme.of(context).textTheme.headlineLarge,
               )),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   icon: Icon(Icons.person),
                   labelText: 'Name',
                   hintText: 'What do people call you?',
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.normal),
@@ -50,14 +50,14 @@ class _ContactPageState extends State<ContactPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   icon: Icon(Icons.email),
                   labelText: 'Email',
                   hintText: 'Enter your email address',
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.normal),
@@ -73,14 +73,14 @@ class _ContactPageState extends State<ContactPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   icon: Icon(Icons.message),
                   labelText: 'Request Message',
                   hintText: 'What do you want',
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.normal),
@@ -95,7 +95,7 @@ class _ContactPageState extends State<ContactPage> {
                   return null;
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: ElevatedButton.icon(
                   onPressed: () {
@@ -105,15 +105,15 @@ class _ContactPageState extends State<ContactPage> {
                       print('Email: $_email');
                       print('Message: $_message');
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Form submitted successfully!')),
+                        const SnackBar(content: Text('Form submitted successfully!')),
                       );
                     }
                   },
-                  icon: Icon(Icons.send, color: Colors.blue),
-                  label: Text('Send'),
+                  icon: const Icon(Icons.send, color: Colors.blue),
+                  label: const Text('Send'),
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    textStyle: TextStyle(fontSize: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    textStyle: const TextStyle(fontSize: 16),
                   ),
                 ),
               ),
