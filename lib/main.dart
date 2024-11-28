@@ -1,9 +1,7 @@
-// import 'dart:convert';
-
+import 'package:app_2/contact_page.dart';
 import 'package:app_2/data_page.dart';
 import 'package:app_2/home_page.dart';
 import 'package:flutter/material.dart';
-// import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MainApp());
@@ -46,6 +44,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(title: const Text('Flutter App')),
         body: _screens[_currentIndex],
         bottomNavigationBar: NavigationBar(
           selectedIndex: _currentIndex,
@@ -64,20 +63,11 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Data',
             ),
             NavigationDestination(
-              icon: Icon(Icons.contacts),
+              icon: Icon(Icons.android),
               label: 'Contact',
             )
           ],
         ));
-  }
-}
-
-class ContactPage extends StatelessWidget {
-  const ContactPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
 

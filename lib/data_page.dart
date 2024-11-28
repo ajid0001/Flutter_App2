@@ -16,7 +16,6 @@ class _DataPageState extends State<DataPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _data = fetchData();
   }
@@ -32,18 +31,20 @@ class _DataPageState extends State<DataPage> {
             } else if (snapshot.hasError) {
               return Text('Error: ${snapshot.error}');
             } else if (snapshot.hasData) {
+              final data = snapshot.data!;
               return ListView.builder(
+                itemCount: data.length,
                 itemBuilder: (context, index) {
                   return Card(
                       child: ListTile(
                     leading: Image.network(
-                      snapshot.data![index].thumbnail,
+                      data[index].thumbnail,
                       width: 50,
                       height: 50,
                       fit: BoxFit.cover,
                     ),
-                    title: Text(snapshot.data![index].name),
-                    subtitle: Text(snapshot.data![index].description),
+                    title: Text(data[index].name),
+                    subtitle: Text(data[index].description),
                   ));
                 },
               );

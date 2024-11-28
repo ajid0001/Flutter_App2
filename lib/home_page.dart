@@ -6,7 +6,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: SafeArea(
+          child: Column(
         children: [
           Expanded(
             child: Container(
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
                 child: Transform.rotate(
                   angle: 0.3,
                   child: Text(
-                    ' Hello World',
+                    ' Hey There!!!',
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      )),
     );
   }
 }
