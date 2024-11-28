@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatefulWidget {
@@ -105,14 +107,16 @@ class _ContactPageState extends State<ContactPage> {
                       print('Email: $_email');
                       print('Message: $_message');
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Form submitted successfully!')),
+                        const SnackBar(
+                            content: Text('Form submitted successfully!')),
                       );
                     }
                   },
                   icon: const Icon(Icons.send, color: Colors.blue),
                   label: const Text('Send'),
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
                     textStyle: const TextStyle(fontSize: 16),
                   ),
                 ),
